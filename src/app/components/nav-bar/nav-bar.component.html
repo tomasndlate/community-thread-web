@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav-elements">
+    <div class="nav-menu-icons">
+      <i *ngIf="!isNavMenuOpen" class="nav-menu-icon-to-open bi bi-list" (click)="flipNavMenuDisplay()"></i>
+      <i *ngIf="isNavMenuOpen" class="nav-menu-icon-to-close bi bi-x-lg" (click)="flipNavMenuDisplay()"></i>
+    </div>
+    <div class="app-logo">
+      <div class="app-icon">
+        <img src="../../../assets/icons/app-icon-blue.png" alt="App Icon">
+      </div>
+      <span class="app-name">Community Thread</span>
+    </div>
+    <div class="nav-pages">
+      <a class="nav-pages-btn" routerLink="/home" routerLinkActive="nav-link-active">Home</a>
+      <a class="nav-pages-btn" routerLink="/communities" routerLinkActive="nav-link-active">Communities</a>
+      <a class="nav-pages-btn" routerLink="/a" routerLinkActive="nav-link-active">Documentation</a>
+    </div>
+  </div>
+  <div class="auth-elements">
+    <a routerLink="/auth/signin" routerLinkActive="nav-auth-active">
+      <app-button-primary size="md" theme="light" label="Log In"></app-button-primary>
+    </a>
+    <a routerLink="/auth/signup" routerLinkActive="nav-auth-active">
+      <app-button-primary size="md" theme="dark" label="Sign Up"></app-button-primary>
+    </a>
+</div>
+</nav>
+<app-nav-menu *ngIf="isNavMenuOpen" (onRouting)="flipNavMenuDisplay()"></app-nav-menu>
+<!-- <app-nav-profile-menu></app-nav-profile-menu> -->

@@ -1,0 +1,44 @@
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* COLORS */
+
+.theme-light {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-highlight-primary);
+  /* Take 1px because of the border */
+  padding: 9px 11px;
+}
+
+.theme-dark{
+  background-color: var(--color-background-contrast);
+  color: var(--color-text-contrast);
+  padding: 10px 12px;
+}
+
+/* SIZES */
+
+.size-xs {
+  font-size: var(--font-size-xs);
+}
+
+.size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.size-md {
+  font-size: var(--font-size-md);
+}
+
+.size-lg {
+  font-size: var(--font-size-lg);
+}
+
+.size-xl {
+  font-size: var(--font-size-xl);
+}
