@@ -1,5 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# CLIENT
+/client/node_modules
+/client/.angular
+
+# SERVER
+
 # Compiled output
 /dist
 /tmp

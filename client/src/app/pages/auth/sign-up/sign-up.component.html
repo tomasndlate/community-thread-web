@@ -1,0 +1,42 @@
+<div class="sign-up">
+  <div class="sign-up_header">
+    Text
+  </div>
+  <div class="sign-up_body">
+    <div class="sign-up_body_auth-methods">
+      <button>Google</button>
+    </div>
+    <div class="sign-up_body_credentials-method">
+      <form action="">
+        <app-input-primary
+          [label]="usernameField.label"
+          [status]="usernameField.status"
+          [inputType]="usernameField.type"
+          [isInputDisabled]="usernameField.isLocked"
+          (inputValueChange)="updateUsernameFieldValue(usernameField, $event)"
+          (inputDisabledChange)="test()"
+          ></app-input-primary>
+
+          <!-- <app-input-primary
+          (inputValueChange)="test()"
+          (inputDisabledChange)="test()"
+          [inputType]="'text'"
+          [status]="'invalid'"
+          [label]="'Username 2'"
+          [isInputDisabled]="false"
+          ></app-input-primary>
+
+          <app-input-primary
+          (inputValueChange)="test()"
+          (inputDisabledChange)="test()"
+          [inputType]="'password'"
+          [status]="'default'"
+          [label]="'Username 3'"
+          [isInputDisabled]="true"
+          ></app-input-primary> -->
+      </form>
+
+
+    </div>
+  </div>
+</div>

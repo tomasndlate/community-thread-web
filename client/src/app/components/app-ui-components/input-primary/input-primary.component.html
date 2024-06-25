@@ -1,0 +1,19 @@
+<div class="input-primary">
+  <label class="input-primary_label" [for]="inputId"> {{label}} </label>
+
+  <div [ngClass]="['input-primary_input', status]">
+    <input
+      [(ngModel)]="inputValue"
+      (ngModelChange)="handleInputChange()"
+      [type]="inputType" [id]="inputId"
+
+      [placeholder]="label"
+      [disabled]="isInputDisabled"
+    >
+    <i *ngIf=" status === 'valid' && !isInputDisabled" class="bi bi-check-lg input-primary_input_icon valid"></i>
+    <i *ngIf=" status === 'invalid' && !isInputDisabled" class="bi bi-x-lg input-primary_input_icon invalid"></i>
+
+    <span *ngIf="isInputDisabled" class="input-primary_input_change" (click)="handleInputDisabledChange()">Change</span>
+  </div>
+
+</div>

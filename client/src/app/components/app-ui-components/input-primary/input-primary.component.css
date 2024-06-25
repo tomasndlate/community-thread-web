@@ -1,0 +1,110 @@
+.input-primary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-primary_label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-primary_input {
+  position: relative;
+  width: 100%;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-highlight-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input-primary_input input {
+  position: relative;
+  padding: 9px 11px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--font-size-md);
+}
+
+.input-primary_input.default {
+  border: 1px solid rgba(60, 60, 60, 0.5);
+}
+
+.input-primary_input.valid {
+  border: 1px solid rgba(28, 144, 59, 0.5);
+  padding-right: 50px;
+}
+
+.input-primary_input.invalid {
+  border: 1px solid rgba(171, 39, 39, 0.5);
+  padding-right: 50px;
+}
+
+.input-primary_input.default:hover,
+.input-primary_input.default:focus {
+  outline: 2px solid rgba(60, 60, 60, 0.7);
+}
+
+.input-primary_input.valid:hover,
+.input-primary_input.valid:focus {
+  outline: 2px solid rgba(28, 144, 59, 0.7);
+}
+
+.input-primary_input.invalid:hover,
+.input-primary_input.invalid:focus {
+  outline: 2px solid rgba(171, 39, 39, 0.7);
+}
+
+.input-primary_input i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+  right: 10px;
+}
+
+.input-primary_input_icon.valid {
+  color: rgba(28, 144, 59, 0.7);
+  -webkit-text-stroke: .8px;
+}
+
+.input-primary_input_icon.invalid {
+  color: rgba(171, 39, 39, 0.7);
+  -webkit-text-stroke: 1.4px;
+}
+
+.input-primary_input_change {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+  right: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  color: rgba(40, 195, 81, 0.7);
+  cursor: pointer;
+}
+
+.input-primary_input input:disabled {
+  background-color: var(--color-highlight-primary);
+  cursor: not-allowed;
+}
+
+.input-primary_input input:disabled:hover {
+  outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  .input-primary_input.default:hover,
+  .input-primary_input.valid:hover,
+  .input-primary_input.invalid:hover {
+    outline: none;
+  }
+}

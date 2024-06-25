@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthRoutes } from './auth.routes';
+import { AppUiComponentsModule } from 'src/app/components/app-ui-components/app-ui-components.module';
 
 
 
@@ -14,7 +15,8 @@ import { AuthRoutes } from './auth.routes';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(AuthRoutes)
+    RouterModule.forChild(AuthRoutes),
+    AppUiComponentsModule
   ]
 })
 export class AuthModule { }
